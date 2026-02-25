@@ -1,0 +1,26 @@
+{
+  "name": "demo-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balenciaga33/demo-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Balenciaga33/demo-project/issues"
+  },
+  "homepage": "https://github.com/Balenciaga33/demo-project#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0",
+    "@zest-pw/test": "^1.0.11",
+    "dotenv": "^17.3.1",
+    "typescript": "^5.9.3"
+  }
+}
