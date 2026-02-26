@@ -14,7 +14,9 @@ jobs:
 
     - name: Create .env from secrets
       run: |
-        echo "${{ secrets.ENV_FILE }}" > .env
+        # ENV_FILE = base64-encoded .env content (run locally: base64 -i .env)
+        echo "${{ secrets.ENV_FILE }}" | base64 -d > .env
+        echo "Created .env with $(grep -c '=' .env || true) variables"
 
     - uses: actions/setup-node@v4
       with:
@@ -27,7 +29,7 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --reporter=list
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
