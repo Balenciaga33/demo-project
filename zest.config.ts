@@ -29,9 +29,9 @@ export default defineZestConfig({
     // Include screenshots in JSON report
     includeInReport: true,
     // Capture screenshots only on failure
-    onlyOnFailure: false,
+    onlyOnFailure: true,
     // Save screenshots to disk as files
-    saveToDisk: false,
+    saveToDisk: true,
   },
 
   // ============================================================================
