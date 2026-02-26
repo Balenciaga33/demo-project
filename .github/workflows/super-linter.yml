@@ -25,3 +25,5 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # ts-standard uses its own tsconfig and fails on repo files; TYPESCRIPT_ES already lints TS
+          DISABLE: TYPESCRIPT_STANDARD
